@@ -1,6 +1,6 @@
 <?php 
-	include 'includes/header.php';
 	include 'core/init.php';
+	include 'includes/header.php';
 	include 'core/connect.php';
 
 	if (!isset($_SESSION["sess_user"])) {
@@ -123,10 +123,12 @@ else{
 							        </div>
 							        <div class="modal-body" style="padding:40px 50px;">
 							          <form role="form" action="" method="post" onsubmit="return validate()">
+							            <input name="comp_id" type="hidden" required="false" value="<?php echo $user['comp_id'] ?>">
+							              <input id="remark_input" name="remarks" class="form-control" style="width: 100% !important;" onkeydown="noSpace(this,event)" required="true">
+
 							            
-							              <input type="text" id="remark_input" name="remarks" class="form-control" style="width: 100% !important;" onkeydown="noSpace(this,event)" required="true">
-							         
-							             <button name="submit" id="solvebtn" value="<?php echo $user['comp_id'] ?>"  onclick="solve(this)"  class="disable log-in-btn btn btn-success btn-block">Done</button>
+							               <!-- <button name="submit" id="solvebtn" value="<?php echo $user['comp_id'] ?>" class="disable log-in-btn btn btn-success btn-block">Done</button> -->
+							                <input type="submit" id="solvebtn" value="solve" class="disable log-in-btn btn btn-success btn-block">
 							          </form>
 											
 							        </div>
@@ -256,11 +258,14 @@ else{
 							          <button type="button" class="close" data-dismiss="modal">&times;</button>
 							        </div>
 							        <div class="modal-body" style="padding:40px 50px;">
-							          <form role="form" action="" method="post">
-							          
+							          <form role="form" action="" method="post" id="c_solve">
+							          	
+							          	  <input name="comp_id" type="hidden" required="false" value="<?php echo $user['comp_id'] ?>">
 							              <input id="remark_input" name="remarks" class="form-control" style="width: 100% !important;" onkeydown="noSpace(this,event)" required="true">
+
 							            
-							               <button name="submit" id="solvebtn" value="<?php echo $user['comp_id'] ?>" onclick="solve(this)"  class="disable log-in-btn btn btn-success btn-block">Done</button>
+							               <!-- <button name="submit" id="solvebtn" value="<?php echo $user['comp_id'] ?>" class="disable log-in-btn btn btn-success btn-block">Done</button> -->
+							                <input type="submit" id="solvebtn" value="solve" class="disable log-in-btn btn btn-success btn-block">
 							          </form>
 							        </div>
 
@@ -356,6 +361,26 @@ function noSpace(el,event){
 
 		xmlhttp.send();
 	}
+
+	$(document).ready(function(){
+		$("#c_solve").submit(function(event){
+			event.preventDefault();
+
+			var $form = $(this);
+
+			var serialized_data = $form.serialize();
+
+			$.ajax({
+				url: "/complaint/comp_solve.php",
+				type: "post",
+				data: serialized_data
+			});
+
+			location.reload();
+
+		});
+	});
+
 
 	function transfer(el){
 		var arr = document.querySelectorAll("#transferInput");
@@ -543,10 +568,10 @@ function pageButtons($pCount,$cur) {
         ** to the "sort" function with a special ($p) number..
         */
        
-        $buttons = "<input type='button1' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+" readonly>";
+        $buttons = "<input type='button1' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
     for ($i=1; $i<=$pCount;$i++)
         $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
-    $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+" readonly>";
+    $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
     return $buttons;
 
 }
@@ -554,6 +579,11 @@ function pageButtons($pCount,$cur) {
 
 
  </script>
+
+ <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
 
 
 
