@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'revalia';
+    src: url(../fonts/Revalia-Regular.ttf) format('truetype');
+}
+
+
+.form-control{
+
+
+}
+.form-control1{
+	
+	height: 160%;
+}
+.form-container{
+	background: #f0f5f4;
+	border-radius: .0em;
+	margin: 0 22%;
+	box-shadow: 1.0em 1.0em 1em rgb(0,0,0);
+}
+.form-padding{
+	padding-top: 2%;
+
+}
+.inner{
+	margin:;
+	
+}
+.form-title{
+	font-size:2.6em;
+	transition: all 1s;
+	color: #476b63;
+
+
+}
+.form-text-label{
+	color:rgb(196,196,185);
+	transition: all 1s;
+	font-size: 1.4em;
+}
+.form-text-input{
+	font-size: 1.3em;
+	display: inline-flex;
+	font-family: century;
+	text-decoration: none;
+	border-bottom: .04em solid rgb(215,215,215);
+	transition: all 1s;
+	font-weight: normal;
+	letter-spacing: .07em;
+	
+
+}
+
+
+.form-text-input-radio{
+	font-size: 1.3em;
+	display: inline-flex;
+	font-family: century;
+	text-decoration: none;
+	
+	transition: all 1s;
+	font-weight: normal;
+	padding-left: 1em;
+
+}
+.form-text-input-dropdown{
+	font-family: century;
+	font-size: 1em;
+	height: 3em;
+	display: inline-flex;
+	font-family: century;
+	text-decoration: none;
+	border-bottom: .04em solid rgb(215,215,215);
+	transition: all 1s;
+	font-weight: normal;
+	letter-spacing: .07em;
+	opacity: .6;
+}
+select optgroup{
+	background: rgb(215,215,215);
+		font-size: 1.3em;
+	font-family: century;
+	text-decoration: none;
+		transition: all 0.8s;
+
+}
+.btn-submit{
+	height: 3em;
+}
+.height{
+	height: auto;
+}

@@ -1,0 +1,246 @@
+
+body 
+{
+	height: 100%;
+	width: 100%;
+	background-image: url("img1.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color : rgb(91, 247, 182);
+    font-size: 14pt;
+    font-family: "Courier New";
+    font-weight: normal;
+    text-shadow: 0 0 15px orange;
+
+}
+
+h1
+{
+	font-family: "Lucida Console";
+    font-weight: bold;
+    text-align: center;
+    color: rgb(140, 2, 2);
+    text-shadow: 0 0 45px blue;
+
+}
+
+#h1
+{
+	font-size: 2.5vw;
+	height : 55px;
+	margin-top: 0px;
+
+
+}
+
+#h4
+{
+	width:100%; 
+	background-color: rgba(100,149,237,0.5); 
+	box-shadow: 0 0 25px #fff; 
+	height: 30px;
+	margin-bottom: 60px;	
+	text-align: center; 
+	border-radius : 10%; 
+	color : white; 
+	text-shadow: 0 0 5px blue; 
+	font-size: 1.3vw;
+	line-height: 30px;
+}
+
+
+
+#inner 
+{
+	width: 60vw;
+	height: 100%;
+	margin : -15px 20vw -25px 20vw;
+	background-color: none;	
+	overflow: visible;
+
+
+}
+
+#inner1
+{
+	
+	width: 50vw;
+	height: : 100%;
+	position : relative;
+	margin : 0 auto;
+	background-color: aqua;
+	border-radius: -10%;
+    background-color: rgba(255,255,255,0.15);
+    padding: 30px;
+    box-shadow: 0 0 300px white;
+    overflow: visible;
+	
+
+}
+
+#details
+{
+	width: 100%;
+	overflow: visible;
+}
+
+input[type=text]
+{
+	border : none;
+	font-size: 15px;
+	width:100%;
+	height: 25px;
+	background-color: rgba(255,255,255,0.5);
+	-webkit-transition: all 300ms ease-in-out;
+	padding : 5px;
+	border-radius : 1%;
+	
+}
+
+input[type=text]:focus
+{
+	border : none;
+	width:100%;
+	height: 50px;
+	box-shadow: 1px 1px 30px rgb(91, 247, 182);
+	outline: 0px;
+	background-color: white;
+	overflow: hidden;
+
+}
+
+#user
+{
+	background-image: url("user.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+#user:focus
+{
+	background-size: 50px 50px;
+
+}
+
+
+
+#mob
+{
+	background-image: url("mob.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+#mob:focus
+{
+	background-size: 50px 50px;
+}
+
+#machine
+{
+	background-image: url("gear.png");
+	background-size: 80px 30px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+#machine:focus
+{
+	background-size: 100px 50px;
+
+}
+
+#details
+{
+	border : none;
+	font-size: 15px;
+	width:100%;
+	height : 100px;
+	background-color: rgba(255,255,255,0.5);
+	-webkit-transition:  height .5s ease-in-out;
+	padding : 5px;
+	border-radius : 1%;
+}
+
+#details:focus
+{
+	border : none;
+	width:100%;
+	height : 150px;
+	box-shadow: 1px 1px 30px rgb(91, 247, 182);
+	outline: 0px;
+	background-color: white;
+}
+#form
+{
+	font-weight: bold;
+
+}
+
+#opt
+{
+	background-color: rgba(255,255,255,.5);
+	font-family: "Courier New";
+	text-align: left;
+	height: 25px;
+	width: 200px;
+
+}
+
+#opt:hover
+{
+	cursor: pointer;
+}
+
+#opt:focus
+{
+	box-shadow: 1px 1px 30px rgb(91, 247, 182);
+	background-color: white;
+
+}
+
+
+#btn
+{
+	margin-left: 40%;
+	width: 150px;
+	background-color : rgba(100,149,237,0.1);
+	border : .5px solid white;
+	box-shadow: 0 0 50px rgb(1, 40, 99);
+	color : white;
+	font-size: 18pt;
+	font-weight: bold;
+	text-shadow: 0 0 25px rgb(0,0,0);
+	font-family: "Courier";
+
+	
+}
+
+#btn:hover 
+{
+	box-shadow: 0 0 50px rgb(155, 191, 247);
+	cursor: pointer;
+}
+
+#btn:active
+{
+	box-shadow:  0 0 50px lightgreen;
+	border: 
+
+}
+
+
+
+input::-webkit-input-placeholder { font-family : "Courier";font-size: 2vw; color: rgba(0,0,0,0.25);text-shadow: 0 0 10px #fff}
+input::-moz-placeholder { font-size: 15pt; color: rgba(0,0,0,0.25);text-shadow: 0 0 10px #fff}
+input:-ms-input-placeholder { font-size: 15pt; color: rgba(0,0,0,0.25);text-shadow: 0 0 10px #fff}
+input:-moz-placeholder { font-size: 15pt; color: rgba(0,0,0,0.25);text-shadow: 0 0 10px #fff }

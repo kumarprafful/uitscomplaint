@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Complaint Portal</title>
+</head>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "css.css" />
+<body>
+
+
+<div id="inner">
+
+<div id="inner1">
+
+<div id="h1"><h1 id="h1">UITS : ONLINE COMPLAINTS SYSTEM</h1><br></div>
+
+<div id="h4">
+<h4>Your E-mail Address will be recorded for further referrences</h4><br>
+</div>
+
+<form id="form" action="process.php" method="post">
+	<label for="User">User<font color="red"><b>*</b></font> :</label><br><br>	
+	<input type="text" name="user" placeholder="I Hope You Got One" required id="user"><br><br>	
+	<label for="mob">Mobile no.<font color="red"><b>*</b></font> :</label><br><br>	
+	<input type="text" name="mob"  placeholder="I Hope You Got One"  required id="mob"><br><br>
+	<label for="block">Block & Room No.<font color="red"><b>*</b></font> :</label><br><br><!-- <select required id="block">
+	<optgroup>
+	<option value="a">A</option>
+	
+	<option value="b">B</option>
+
+	<option value="c">C</option>
+
+	<option value="d">D</option>
+
+	<option value="e">E</option>
+	</optgroup>-->
+	<input type="text" name="block" required  placeholder="I Hope You Got One" id="block"><br><br>
+	<label><abbr title="Select One from The List" >Complaint Type</abbr><font color="red"><b>*</b></font><font color="red"><b>*</b></font> :</label><br><br>
+			<label for="1"><input type="radio" name="radio" value="computer" id="1">Computer</label><br>
+			<label for="2"><input type="radio" name="radio" value="printer" id="2">Printer</label><br>
+			<label for="3"><input type="radio" name="radio" value="ups" id="3">UPS</label><br>
+			<label for="4"><input type="radio" name="radio" value="projector" id="4">LCD Projector</label><br>
+			<label for="5"><input type="radio" name="radio" value="internet" id="5">Internet/LAN</label><br>
+			<label for="6"><input type="radio" name="radio" value="wifi" id="6">Wi-Fi</label><br>
+			<label for="7"><input type="radio" name="radio" value="other" id="7" onclick="alert('Please specify in Details below')">Any Other</label>
+			
+
+	<label for="details"><h4><abbr title="This will help us resolve your issue" >Details of the Issue :</abbr></h4>
+	<textarea cols="70" rows="7" id="details" placeholder="Please Enter the issue description" required style="resize:none"></textarea></label><br>
+
+	<label for="machine">Machine Name - Model No.</label><br><br>	
+	<input type="text" name="machine" placeholder="would be helpful"  id="machine"><br><br>
+	<label for="time">Preferred Time</label><br><br>	
+	<select id="opt">
+  		<optgroup>
+  		<option value="" style="font-weight: bold;">Working Hours</option>
+ 		<option value="9">9:00 am</option>
+  		<option value="10">10:00 am</option>
+  		<option value="11">11:00 am</option>
+  		<option value="12">12:00 pm</option>
+  		<option value="13">1:00 pm</option>
+  		<option value="14">2:00 pm</option>
+  		<option value="15">3:00 pm</option>
+  		<option value="16">4:00 pm</option>
+  		<option value="17">5:00 pm</option>
+  		<option value="18">6:00 pm</option>
+	</select><br><br><br>
+
+	<div style="width:100%; background-color: rgba(100,149,237,0.5); box-shadow: 0 0 25px #fff; height : 20px; padding:5px; text-align: center; border-radius : 10%; color : white; text-shadow: 0 0 5px blue; font-size: 1.3vw;"><em>A copy of your submission will be sent to <strong><font color="lightblue"><b>upload@ipu.ac.in</b></font></strong></em></div>
+	<br><br><br>
+
+	
+	<input type="submit" name="submit" value="SUBMIT" id="btn">
+		
+	<hr>
+
+</form>
+		
+
+
+
+
+
+</div>
+
+</div>
